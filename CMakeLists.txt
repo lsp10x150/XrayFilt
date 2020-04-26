@@ -7,7 +7,7 @@
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
 # Название проекта
 project(example2)
-
+set(CMAKE_PREFIX_PATH /opt/applications/geant4/geant4.10.04.p01-install/)
 # Поиск пакетов Geant4, включение всех доступных интерфейсов пользователя 
 # (Qt, GAG, tcsh, csh) и драйверов визуализации по умолчанию.
 # Можно использовать переменную окружения WITH_GEANT4_UIVIS, установить в OFF (выключено)
