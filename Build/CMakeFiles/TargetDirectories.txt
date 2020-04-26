@@ -1,8 +1,0 @@
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/install/strip.dir
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/install/local.dir
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/example2.dir
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/ex1.dir
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/rebuild_cache.dir
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/edit_cache.dir
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/install.dir
-/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/Build/CMakeFiles/list_install_components.dir

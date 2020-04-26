@@ -43,17 +43,17 @@ RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lsp10/workspace/G4WORK/Exmpls/example2_rus
+CMAKE_SOURCE_DIR = /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug
+CMAKE_BINARY_DIR = /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug
 
 # Utility rule file for ex1.
 
 # Include the progress variables for this target.
 include CMakeFiles/ex1.dir/progress.make
 
-CMakeFiles/ex1: example2
+CMakeFiles/ex1: XrayFilt
 
 
 ex1: CMakeFiles/ex1
@@ -71,6 +71,6 @@ CMakeFiles/ex1.dir/clean:
 .PHONY : CMakeFiles/ex1.dir/clean
 
 CMakeFiles/ex1.dir/depend:
-	cd /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsp10/workspace/G4WORK/Exmpls/example2_rus /home/lsp10/workspace/G4WORK/Exmpls/example2_rus /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/ex1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/ex1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ex1.dir/depend
 

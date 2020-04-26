@@ -43,10 +43,10 @@ RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lsp10/workspace/G4WORK/Exmpls/example2_rus
+CMAKE_SOURCE_DIR = /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug
+CMAKE_BINARY_DIR = /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/example2.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/example2.dir/flags.make
 
 CMakeFiles/example2.dir/example2.cpp.o: CMakeFiles/example2.dir/flags.make
 CMakeFiles/example2.dir/example2.cpp.o: ../example2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/example2.dir/example2.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/example2.cpp.o -c /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/example2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/example2.dir/example2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/example2.cpp.o -c /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/example2.cpp
 
 CMakeFiles/example2.dir/example2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example2.dir/example2.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/example2.cpp > CMakeFiles/example2.dir/example2.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/example2.cpp > CMakeFiles/example2.dir/example2.cpp.i
 
 CMakeFiles/example2.dir/example2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example2.dir/example2.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/example2.cpp -o CMakeFiles/example2.dir/example2.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/example2.cpp -o CMakeFiles/example2.dir/example2.cpp.s
 
 CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o: CMakeFiles/example2.dir/flags.make
 CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o: ../src/ExG4ActionInitialization01.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o -c /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4ActionInitialization01.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o -c /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp
 
 CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4ActionInitialization01.cpp > CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp > CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.i
 
 CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4ActionInitialization01.cpp -o CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp -o CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.s
 
 CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o: CMakeFiles/example2.dir/flags.make
 CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o: ../src/ExG4DetectorConstruction01.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o -c /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorConstruction01.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o -c /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp
 
 CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorConstruction01.cpp > CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp > CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.i
 
 CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorConstruction01.cpp -o CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp -o CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.s
 
 CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o: CMakeFiles/example2.dir/flags.make
 CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o: ../src/ExG4DetectorSD.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o -c /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorSD.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o -c /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp
 
 CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorSD.cpp > CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp > CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.i
 
 CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorSD.cpp -o CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp -o CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.s
 
 CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: CMakeFiles/example2.dir/flags.make
 CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: ../src/ExG4PrimaryGeneratorAction01.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o -c /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4PrimaryGeneratorAction01.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o -c /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp
 
 CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4PrimaryGeneratorAction01.cpp > CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp > CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.i
 
 CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4PrimaryGeneratorAction01.cpp -o CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp -o CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
 
 # Object files for target example2
 example2_OBJECTS = \
@@ -185,7 +185,7 @@ example2: /opt/applications/geant4/geant4.10.04.p01-install/lib/libG4intercoms.s
 example2: /opt/applications/geant4/geant4.10.04.p01-install/lib/libG4global.so
 example2: /opt/applications/geant4/geant4.10.04.p01-install/lib/libG4clhep.so
 example2: CMakeFiles/example2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable example2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable example2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/example2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -198,6 +198,6 @@ CMakeFiles/example2.dir/clean:
 .PHONY : CMakeFiles/example2.dir/clean
 
 CMakeFiles/example2.dir/depend:
-	cd /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsp10/workspace/G4WORK/Exmpls/example2_rus /home/lsp10/workspace/G4WORK/Exmpls/example2_rus /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/example2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/example2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/example2.dir/depend
 

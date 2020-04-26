@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/example2.cpp" "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/example2.dir/example2.cpp.o"
-  "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4ActionInitialization01.cpp" "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o"
-  "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorConstruction01.cpp" "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o"
-  "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4DetectorSD.cpp" "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o"
-  "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/src/ExG4PrimaryGeneratorAction01.cpp" "/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o"
+  "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/example2.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/example2.dir/example2.cpp.o"
+  "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o"
+  "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o"
+  "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o"
+  "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

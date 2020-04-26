@@ -6,5 +6,5 @@ CXX_FLAGS = -W -Wall -pedantic -Wno-non-virtual-dtor -Wno-long-long -Wwrite-stri
 
 CXX_DEFINES = -DG4INTY_USE_QT -DG4INTY_USE_XT -DG4MULTITHREADED -DG4UI_USE -DG4UI_USE_QT -DG4UI_USE_TCSH -DG4UI_USE_XM -DG4VERBOSE -DG4VIS_USE -DG4VIS_USE_OPENGL -DG4VIS_USE_OPENGLQT -DG4VIS_USE_OPENGLX -DG4VIS_USE_OPENGLXM -DG4_STORE_TRAJECTORY
 
-CXX_INCLUDES = -I/home/lsp10/workspace/G4WORK/Exmpls/example2_rus/include -isystem /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4 -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtCore -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtOpenGL 
+CXX_INCLUDES = -I/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include -isystem /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4 -isystem /usr/include/qt4 -isystem /usr/include/qt4/QtCore -isystem /usr/include/qt4/QtGui -isystem /usr/include/qt4/QtOpenGL 
 

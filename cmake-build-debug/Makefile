@@ -48,35 +48,13 @@ RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lsp10/workspace/G4WORK/Exmpls/example2_rus
+CMAKE_SOURCE_DIR = /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug
+CMAKE_BINARY_DIR = /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -102,16 +80,27 @@ install/local/fast: preinstall/fast
 	/snap/clion/111/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/111/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/snap/clion/111/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,11 +113,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/snap/clion/111/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsp10/workspace/G4WORK/Exmpls/example2_rus/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,17 +157,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named example2
+# Target rules for targets named XrayFilt
 
 # Build rule for target.
-example2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 example2
-.PHONY : example2
+XrayFilt: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 XrayFilt
+.PHONY : XrayFilt
 
 # fast build rule for target.
-example2/fast:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/build
-.PHONY : example2/fast
+XrayFilt/fast:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/build
+.PHONY : XrayFilt/fast
 
 #=============================================================================
 # Target rules for targets named ex1
@@ -182,32 +182,32 @@ ex1/fast:
 	$(MAKE) -f CMakeFiles/ex1.dir/build.make CMakeFiles/ex1.dir/build
 .PHONY : ex1/fast
 
-example2.o: example2.cpp.o
+XrayFilt.o: XrayFilt.cpp.o
 
-.PHONY : example2.o
+.PHONY : XrayFilt.o
 
 # target to build an object file
-example2.cpp.o:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/example2.cpp.o
-.PHONY : example2.cpp.o
+XrayFilt.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
+.PHONY : XrayFilt.cpp.o
 
-example2.i: example2.cpp.i
+XrayFilt.i: XrayFilt.cpp.i
 
-.PHONY : example2.i
+.PHONY : XrayFilt.i
 
 # target to preprocess a source file
-example2.cpp.i:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/example2.cpp.i
-.PHONY : example2.cpp.i
+XrayFilt.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/XrayFilt.cpp.i
+.PHONY : XrayFilt.cpp.i
 
-example2.s: example2.cpp.s
+XrayFilt.s: XrayFilt.cpp.s
 
-.PHONY : example2.s
+.PHONY : XrayFilt.s
 
 # target to generate assembly for a file
-example2.cpp.s:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/example2.cpp.s
-.PHONY : example2.cpp.s
+XrayFilt.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/XrayFilt.cpp.s
+.PHONY : XrayFilt.cpp.s
 
 src/ExG4ActionInitialization01.o: src/ExG4ActionInitialization01.cpp.o
 
@@ -215,7 +215,7 @@ src/ExG4ActionInitialization01.o: src/ExG4ActionInitialization01.cpp.o
 
 # target to build an object file
 src/ExG4ActionInitialization01.cpp.o:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.o
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o
 .PHONY : src/ExG4ActionInitialization01.cpp.o
 
 src/ExG4ActionInitialization01.i: src/ExG4ActionInitialization01.cpp.i
@@ -224,7 +224,7 @@ src/ExG4ActionInitialization01.i: src/ExG4ActionInitialization01.cpp.i
 
 # target to preprocess a source file
 src/ExG4ActionInitialization01.cpp.i:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.i
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.i
 .PHONY : src/ExG4ActionInitialization01.cpp.i
 
 src/ExG4ActionInitialization01.s: src/ExG4ActionInitialization01.cpp.s
@@ -233,7 +233,7 @@ src/ExG4ActionInitialization01.s: src/ExG4ActionInitialization01.cpp.s
 
 # target to generate assembly for a file
 src/ExG4ActionInitialization01.cpp.s:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4ActionInitialization01.cpp.s
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.s
 .PHONY : src/ExG4ActionInitialization01.cpp.s
 
 src/ExG4DetectorConstruction01.o: src/ExG4DetectorConstruction01.cpp.o
@@ -242,7 +242,7 @@ src/ExG4DetectorConstruction01.o: src/ExG4DetectorConstruction01.cpp.o
 
 # target to build an object file
 src/ExG4DetectorConstruction01.cpp.o:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.o
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
 .PHONY : src/ExG4DetectorConstruction01.cpp.o
 
 src/ExG4DetectorConstruction01.i: src/ExG4DetectorConstruction01.cpp.i
@@ -251,7 +251,7 @@ src/ExG4DetectorConstruction01.i: src/ExG4DetectorConstruction01.cpp.i
 
 # target to preprocess a source file
 src/ExG4DetectorConstruction01.cpp.i:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.i
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.i
 .PHONY : src/ExG4DetectorConstruction01.cpp.i
 
 src/ExG4DetectorConstruction01.s: src/ExG4DetectorConstruction01.cpp.s
@@ -260,7 +260,7 @@ src/ExG4DetectorConstruction01.s: src/ExG4DetectorConstruction01.cpp.s
 
 # target to generate assembly for a file
 src/ExG4DetectorConstruction01.cpp.s:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4DetectorConstruction01.cpp.s
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.s
 .PHONY : src/ExG4DetectorConstruction01.cpp.s
 
 src/ExG4DetectorSD.o: src/ExG4DetectorSD.cpp.o
@@ -269,7 +269,7 @@ src/ExG4DetectorSD.o: src/ExG4DetectorSD.cpp.o
 
 # target to build an object file
 src/ExG4DetectorSD.cpp.o:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.o
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
 .PHONY : src/ExG4DetectorSD.cpp.o
 
 src/ExG4DetectorSD.i: src/ExG4DetectorSD.cpp.i
@@ -278,7 +278,7 @@ src/ExG4DetectorSD.i: src/ExG4DetectorSD.cpp.i
 
 # target to preprocess a source file
 src/ExG4DetectorSD.cpp.i:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.i
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.i
 .PHONY : src/ExG4DetectorSD.cpp.i
 
 src/ExG4DetectorSD.s: src/ExG4DetectorSD.cpp.s
@@ -287,7 +287,7 @@ src/ExG4DetectorSD.s: src/ExG4DetectorSD.cpp.s
 
 # target to generate assembly for a file
 src/ExG4DetectorSD.cpp.s:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4DetectorSD.cpp.s
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.s
 .PHONY : src/ExG4DetectorSD.cpp.s
 
 src/ExG4PrimaryGeneratorAction01.o: src/ExG4PrimaryGeneratorAction01.cpp.o
@@ -296,7 +296,7 @@ src/ExG4PrimaryGeneratorAction01.o: src/ExG4PrimaryGeneratorAction01.cpp.o
 
 # target to build an object file
 src/ExG4PrimaryGeneratorAction01.cpp.o:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.o
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o
 .PHONY : src/ExG4PrimaryGeneratorAction01.cpp.o
 
 src/ExG4PrimaryGeneratorAction01.i: src/ExG4PrimaryGeneratorAction01.cpp.i
@@ -305,7 +305,7 @@ src/ExG4PrimaryGeneratorAction01.i: src/ExG4PrimaryGeneratorAction01.cpp.i
 
 # target to preprocess a source file
 src/ExG4PrimaryGeneratorAction01.cpp.i:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.i
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.i
 .PHONY : src/ExG4PrimaryGeneratorAction01.cpp.i
 
 src/ExG4PrimaryGeneratorAction01.s: src/ExG4PrimaryGeneratorAction01.cpp.s
@@ -314,7 +314,7 @@ src/ExG4PrimaryGeneratorAction01.s: src/ExG4PrimaryGeneratorAction01.cpp.s
 
 # target to generate assembly for a file
 src/ExG4PrimaryGeneratorAction01.cpp.s:
-	$(MAKE) -f CMakeFiles/example2.dir/build.make CMakeFiles/example2.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
 .PHONY : src/ExG4PrimaryGeneratorAction01.cpp.s
 
 # Help Target
@@ -323,17 +323,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
-	@echo "... list_install_components"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... example2"
-	@echo "... rebuild_cache"
-	@echo "... ex1"
+	@echo "... install"
+	@echo "... list_install_components"
+	@echo "... XrayFilt"
 	@echo "... edit_cache"
-	@echo "... example2.o"
-	@echo "... example2.i"
-	@echo "... example2.s"
+	@echo "... ex1"
+	@echo "... rebuild_cache"
+	@echo "... XrayFilt.o"
+	@echo "... XrayFilt.i"
+	@echo "... XrayFilt.s"
 	@echo "... src/ExG4ActionInitialization01.o"
 	@echo "... src/ExG4ActionInitialization01.i"
 	@echo "... src/ExG4ActionInitialization01.s"

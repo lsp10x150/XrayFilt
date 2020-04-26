@@ -18,18 +18,16 @@ ExG4DetectorSD::ExG4DetectorSD(G4String name): G4VSensitiveDetector(name),
 G4bool ExG4DetectorSD::ProcessHits(G4Step* step, G4TouchableHistory* history)
    {
            /// Заполняем гистограмму энергетического распределения
-    double bin_width = (HIST_MAX - HIST_MIN) / NOBINSenergies;
-    double energy = step->GetPreStepPoint()->GetKineticEnergy();
-    if(step->GetTrack()->GetDefinition()->GetParticleName() == "gamma" ){
-            // Определяем индекс (номер) бина гистограммы энергии
+        double bin_width = (HIST_MAX - HIST_MIN) / NOBINSenergies;
+        double energy = step->GetPreStepPoint()->GetKineticEnergy();
+        if(step->GetTrack()->GetDefinition()->GetParticleName() == "gamma" ){
          int index = int(floor((energy-HIST_MIN)/bin_width));
-            // Добавляем +1 в соответствующий бин
          if(index >= 0 && index < NOBINSenergies)
            histogram[index]++;
            /// Далее заполняем гистограмму углового распределения
-         G4ThreeVector ang = step->GetPreStepPoint()->GetMomentumDirection(); // Получаем вектор направления частицы
-         G4ThreeVector *centerVector = new G4ThreeVector(0, 0, 1); // Задаем единичный вектор в направлении оси OZ для измерения угла
-         double angle=ang.angle(*centerVector); // Применяем фунцию класса G4ThreeVector - находим угол относительно вектора centerVector
+         G4ThreeVector ang = step->GetPreStepPoint()->GetMomentumDirection();
+         G4ThreeVector *centerVector = new G4ThreeVector(0, 0, 1);
+         double angle=ang.angle(*centerVector);
          double bin_width_ang = (181) / NOBINSangles;
          index = int(floor((angle)/bin_width_ang));
          if(index >= 0 && index < NOBINSangles)
