@@ -1,0 +1,8 @@
+//
+// Created by lsp10 on 09.05.2020.
+//
+
+#ifndef XRAYFILT_GETCONFIG_HH
+#define XRAYFILT_GETCONFIG_HH
+
+#endif //XRAYFILT_GETCONFIG_HH

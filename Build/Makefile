@@ -317,6 +317,33 @@ src/ExG4PrimaryGeneratorAction01.cpp.s:
 	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
 .PHONY : src/ExG4PrimaryGeneratorAction01.cpp.s
 
+src/GetConfig.o: src/GetConfig.cpp.o
+
+.PHONY : src/GetConfig.o
+
+# target to build an object file
+src/GetConfig.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o
+.PHONY : src/GetConfig.cpp.o
+
+src/GetConfig.i: src/GetConfig.cpp.i
+
+.PHONY : src/GetConfig.i
+
+# target to preprocess a source file
+src/GetConfig.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.i
+.PHONY : src/GetConfig.cpp.i
+
+src/GetConfig.s: src/GetConfig.cpp.s
+
+.PHONY : src/GetConfig.s
+
+# target to generate assembly for a file
+src/GetConfig.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.s
+.PHONY : src/GetConfig.cpp.s
+
 src/spectraManager.o: src/spectraManager.cpp.o
 
 .PHONY : src/spectraManager.o
@@ -373,6 +400,9 @@ help:
 	@echo "... src/ExG4PrimaryGeneratorAction01.o"
 	@echo "... src/ExG4PrimaryGeneratorAction01.i"
 	@echo "... src/ExG4PrimaryGeneratorAction01.s"
+	@echo "... src/GetConfig.o"
+	@echo "... src/GetConfig.i"
+	@echo "... src/GetConfig.s"
 	@echo "... src/spectraManager.o"
 	@echo "... src/spectraManager.i"
 	@echo "... src/spectraManager.s"
