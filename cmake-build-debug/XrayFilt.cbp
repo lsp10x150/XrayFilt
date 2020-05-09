@@ -189,6 +189,9 @@
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/ExG4PrimaryGeneratorAction01.hh">
 			<Option target="XrayFilt"/>
 		</Unit>
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/spectraManager.hh">
+			<Option target="XrayFilt"/>
+		</Unit>
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
@@ -199,6 +202,9 @@
 			<Option target="XrayFilt"/>
 		</Unit>
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp">
+			<Option target="XrayFilt"/>
+		</Unit>
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/spectraManager.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/CMakeLists.txt">

@@ -9,9 +9,8 @@
      {
      private:
        static const int NOBINSangles = 181;
-       const double HIST_MAX;
-       const double HIST_MIN;
-       int histogram[180];
+       constexpr static const double HIST_MAX = 160;
+       int histogram[160];
        int histogram_angle[NOBINSangles];
      public:
         ExG4DetectorSD(G4String name);

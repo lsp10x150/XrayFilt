@@ -317,6 +317,33 @@ src/ExG4PrimaryGeneratorAction01.cpp.s:
 	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
 .PHONY : src/ExG4PrimaryGeneratorAction01.cpp.s
 
+src/spectraManager.o: src/spectraManager.cpp.o
+
+.PHONY : src/spectraManager.o
+
+# target to build an object file
+src/spectraManager.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o
+.PHONY : src/spectraManager.cpp.o
+
+src/spectraManager.i: src/spectraManager.cpp.i
+
+.PHONY : src/spectraManager.i
+
+# target to preprocess a source file
+src/spectraManager.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.i
+.PHONY : src/spectraManager.cpp.i
+
+src/spectraManager.s: src/spectraManager.cpp.s
+
+.PHONY : src/spectraManager.s
+
+# target to generate assembly for a file
+src/spectraManager.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.s
+.PHONY : src/spectraManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -346,6 +373,9 @@ help:
 	@echo "... src/ExG4PrimaryGeneratorAction01.o"
 	@echo "... src/ExG4PrimaryGeneratorAction01.i"
 	@echo "... src/ExG4PrimaryGeneratorAction01.s"
+	@echo "... src/spectraManager.o"
+	@echo "... src/spectraManager.i"
+	@echo "... src/spectraManager.s"
 .PHONY : help
 
 

@@ -4,6 +4,7 @@
 #include "G4VUserPrimaryGeneratorAction.hh"
 #include "G4ParticleGun.hh"
 #include "globals.hh"
+#include "spectraManager.hh"
 #include <map>
 
 class G4ParticleGun;
@@ -11,18 +12,12 @@ class G4Event;
 class G4Box;
 extern int cntr;
 extern int startTime;
-
-class spectraManager {
-    std::map<G4double, G4double> initialSpectra;
-public:
-    spectraManager();
-    std::map<G4double, G4double> getInitialSpectra();
-};
+extern spectraManager spectras;
 
 class ExG4PrimaryGeneratorAction01 : public G4VUserPrimaryGeneratorAction
 {
   public:
-    spectraManager initialSpectra;
+    //spectraManager initialSpectra;
     ExG4PrimaryGeneratorAction01();
     virtual ~ExG4PrimaryGeneratorAction01();
     virtual void GeneratePrimaries(G4Event*);

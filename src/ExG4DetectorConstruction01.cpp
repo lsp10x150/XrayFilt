@@ -57,7 +57,7 @@ G4VPhysicalVolume* ExG4DetectorConstruction01::Construct()
     /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo
     ///          Собственная фильтрация трубки
     /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo
-    G4Box* inherentFiltSolid = new G4Box("inherentFilt", 3*cm, 3*cm, 2.5*mm);
+    G4Box* inherentFiltSolid = new G4Box("inherentFilt", 3*cm, 3*cm, 1.25*mm);
     // Согласно ISO 9236-1, собственная фильтрация кожуха рентгеновской трубки - 2,5 +- 0.2 мм Al
     G4LogicalVolume* inherentFiltLogic = new G4LogicalVolume(inherentFiltSolid, Al, "inherentFilt");
     new G4PVPlacement(0, G4ThreeVector(0,0,1*cm), inherentFiltLogic, "inherentFilt",
@@ -67,7 +67,7 @@ G4VPhysicalVolume* ExG4DetectorConstruction01::Construct()
     ///                     Фильтр
     /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo
 
-    G4Box* solidFilt = new G4Box("Filter", 5.*cm, 5.*cm, FILTER_WIDTH*mm);
+    G4Box* solidFilt = new G4Box("Filter", 5.*cm, 5.*cm, (FILTER_WIDTH/2)*mm);
     G4LogicalVolume* logicFilt = new G4LogicalVolume(solidFilt, Al,"Filter");
     new G4PVPlacement(0,G4ThreeVector(0,0,-45*cm), logicFilt,
                       "Filter", logicWorld, false, 0, checkOverlaps);

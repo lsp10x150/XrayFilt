@@ -1,24 +1,23 @@
 ﻿#include<G4Step.hh>
 #include<fstream>
 #include<iostream>
+#include <ExG4PrimaryGeneratorAction01.hh>
 #include "G4SystemOfUnits.hh"
 #include "G4ThreeVector.hh"
 #include "ExG4DetectorSD.hh"
 
-ExG4DetectorSD::ExG4DetectorSD(G4String name): G4VSensitiveDetector(name),
-                             HIST_MAX(160),// Инициализация верхней границы
-                             HIST_MIN(0) // Инициализация нижней границы
-                             {
+ExG4DetectorSD::ExG4DetectorSD(G4String name): G4VSensitiveDetector(name){}
+/*                             {
   for(int i = 0; i<HIST_MAX; i++){
     histogram[i] = 0;
     histogram_angle[i] = 0;
   }
 }
-
+*/
 G4bool ExG4DetectorSD::ProcessHits(G4Step* step, G4TouchableHistory* history)
    {
            /// Заполняем гистограмму энергетического распределения
-        double energy = step->GetPreStepPoint()->GetKineticEnergy()/keV;
+        /*double energy = step->GetPreStepPoint()->GetKineticEnergy()/keV;
         if(step->GetTrack()->GetDefinition()->GetParticleName() == "gamma" ){
          int index = int(floor(energy));
          if(index >= 0 && index < HIST_MAX)
@@ -31,15 +30,20 @@ G4bool ExG4DetectorSD::ProcessHits(G4Step* step, G4TouchableHistory* history)
          index = int(floor((angle)/bin_width_ang));
          if(index >= 0 && index < NOBINSangles)
              histogram_angle[index]++;
-}
+          */
+        spectras.CollectSpectra(step, history);
+
+
      step->GetTrack()->SetTrackStatus(fStopAndKill);
      return true;
    }
 
-
 ExG4DetectorSD::~ExG4DetectorSD()
 {
-    std::ofstream file("spectrum.dat");
+    /*
+    std::string name = "./spectrums/spectrum";
+    std::string date = std::to_string(time(0))+".dat";
+    std::ofstream file(name+date);
     for(int i = 0; i<HIST_MAX; i++)
     {
         double energy = i;
@@ -55,4 +59,5 @@ ExG4DetectorSD::~ExG4DetectorSD()
              << std::setw(15) << histogram_angle[i] << std::endl;
     }
     file.close();
+     */
 }

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/Build/CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o"
   "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/Build/CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o"
   "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/Build/CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o"
+  "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/spectraManager.cpp" "/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/Build/CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

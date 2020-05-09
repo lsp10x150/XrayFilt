@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/111/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/112/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/111/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/112/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,37 +59,37 @@ CMAKE_BINARY_DIR = /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-deb
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/112/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/snap/clion/112/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/112/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/snap/clion/112/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/snap/clion/112/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+	/snap/clion/112/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -105,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/112/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -116,7 +116,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/111/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/112/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -317,6 +317,33 @@ src/ExG4PrimaryGeneratorAction01.cpp.s:
 	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
 .PHONY : src/ExG4PrimaryGeneratorAction01.cpp.s
 
+src/spectraManager.o: src/spectraManager.cpp.o
+
+.PHONY : src/spectraManager.o
+
+# target to build an object file
+src/spectraManager.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o
+.PHONY : src/spectraManager.cpp.o
+
+src/spectraManager.i: src/spectraManager.cpp.i
+
+.PHONY : src/spectraManager.i
+
+# target to preprocess a source file
+src/spectraManager.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.i
+.PHONY : src/spectraManager.cpp.i
+
+src/spectraManager.s: src/spectraManager.cpp.s
+
+.PHONY : src/spectraManager.s
+
+# target to generate assembly for a file
+src/spectraManager.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.s
+.PHONY : src/spectraManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -346,6 +373,9 @@ help:
 	@echo "... src/ExG4PrimaryGeneratorAction01.o"
 	@echo "... src/ExG4PrimaryGeneratorAction01.i"
 	@echo "... src/ExG4PrimaryGeneratorAction01.s"
+	@echo "... src/spectraManager.o"
+	@echo "... src/spectraManager.i"
+	@echo "... src/spectraManager.s"
 .PHONY : help
 
 
