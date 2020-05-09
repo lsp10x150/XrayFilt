@@ -6,10 +6,10 @@
 #include "ExG4DetectorSD.hh"
 
 ExG4DetectorSD::ExG4DetectorSD(G4String name): G4VSensitiveDetector(name),
-                             HIST_MAX(100*keV),// Инициализация верхней границы
-                             HIST_MIN(0 *keV)// Инициализация нижней границы
-{
-  for(int i = 0; i<NOBINSenergies; i++){
+                             HIST_MAX(160),// Инициализация верхней границы
+                             HIST_MIN(0) // Инициализация нижней границы
+                             {
+  for(int i = 0; i<HIST_MAX; i++){
     histogram[i] = 0;
     histogram_angle[i] = 0;
   }
@@ -18,11 +18,10 @@ ExG4DetectorSD::ExG4DetectorSD(G4String name): G4VSensitiveDetector(name),
 G4bool ExG4DetectorSD::ProcessHits(G4Step* step, G4TouchableHistory* history)
    {
            /// Заполняем гистограмму энергетического распределения
-        double bin_width = (HIST_MAX - HIST_MIN) / NOBINSenergies;
-        double energy = step->GetPreStepPoint()->GetKineticEnergy();
+        double energy = step->GetPreStepPoint()->GetKineticEnergy()/keV;
         if(step->GetTrack()->GetDefinition()->GetParticleName() == "gamma" ){
-         int index = int(floor((energy-HIST_MIN)/bin_width));
-         if(index >= 0 && index < NOBINSenergies)
+         int index = int(floor(energy));
+         if(index >= 0 && index < HIST_MAX)
            histogram[index]++;
            /// Далее заполняем гистограмму углового распределения
          G4ThreeVector ang = step->GetPreStepPoint()->GetMomentumDirection();
@@ -41,19 +40,17 @@ G4bool ExG4DetectorSD::ProcessHits(G4Step* step, G4TouchableHistory* history)
 ExG4DetectorSD::~ExG4DetectorSD()
 {
     std::ofstream file("spectrum.dat");
-    double bin_width = (HIST_MAX - HIST_MIN) / NOBINSenergies;
-    for(int i = 0; i<NOBINSenergies; i++)
+    for(int i = 0; i<HIST_MAX; i++)
     {
-        double energy = i*bin_width + HIST_MIN;
-        file << std::setw(15) << energy/keV << " "
+        double energy = i;
+        file << std::setw(15) << energy << " "
              << std::setw(15) << histogram[i] << std::endl;
     }
     file.close();
     file.open("angle.dat");
-    bin_width = (181) / NOBINSangles;
-    for(int i = 0; i<NOBINSangles; i++)
+    for(int i = 0; i<181; i++)
     {
-        double angle = i*bin_width;
+        double angle = i;
         file << std::setw(15) << angle << " "
              << std::setw(15) << histogram_angle[i] << std::endl;
     }

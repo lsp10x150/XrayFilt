@@ -1,9 +1,3 @@
-# Macro file for the visualization setting in the initialization phase 
-# of the B1 example when running in interactive mode
-#
-
-# Use these open statements to open selected visualization
-#
 # Use this open statement to create an OpenGL view:
 /vis/open OGL 600x600-0+0
 #
@@ -48,9 +42,9 @@
 # (if too many tracks cause core dump => /tracking/storeTrajectory 0)
 #
 # Draw hits at end of event:
-#/vis/scene/add/hits
+/vis/scene/add/hits
 #
-# To draw only gammas:
+## To draw only gammas:
 #/vis/filtering/trajectories/create/particleFilter
 #/vis/filtering/trajectories/particleFilter-0/add gamma
 #
@@ -71,11 +65,11 @@
 #
 # Decorations
 # Name
-#/vis/set/textColour green
-#/vis/set/textLayout right
-#/vis/scene/add/text2D 0.9 -.9 24 ! ! exampleB1
+/vis/set/textColour green
+/vis/set/textLayout right
+/vis/scene/add/text2D 0.9 -.9 24 ! ! XrayFilt
 # or, if your system does not support right-adjustment
-#/vis/scene/add/text2D 0 -.9 24 ! ! exampleB1
+#/vis/scene/add/text2D 0 -.9 24 ! !
 #/vis/set/textLayout    # Revert to normal (left adjusted) layout
 #/vis/set/textColour    # Revert to default text colour (blue)
 #
@@ -102,11 +96,11 @@
 # To get nice view
 # Make the "World" box invisible
 /vis/geometry/set/visibility World 0 true
-/vis/geometry/set/colour World 0 0 0 1 .3
-# "Envelope" is transparent blue to represent water
-/vis/geometry/set/colour Detector 0 0 1 1 .5
+/vis/geometry/set/colour World 0 0 0 1 .1
+# "Envelope" is transparent blue to represent air
+/vis/geometry/set/colour Detector 0 1 1 1 .5
 /vis/viewer/set/style surface
-/vis/viewer/set/hiddenMarker true
+#/vis/viewer/set/hiddenMarker true
 /vis/viewer/set/viewpointThetaPhi 120 150
 #
 # Re-establish auto refreshing and verbosity:
@@ -115,3 +109,4 @@
 #
 # For file-based drivers, use this to create an empty detector view:
 #/vis/viewer/flush
+/run/beamOn 1000
