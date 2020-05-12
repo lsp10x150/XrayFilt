@@ -5,6 +5,7 @@
 #include "G4ParticleGun.hh"
 #include "globals.hh"
 #include "spectraManager.hh"
+#include "GetConfig.hh"
 #include <map>
 
 class G4ParticleGun;
@@ -13,6 +14,7 @@ class G4Box;
 extern int cntr;
 extern int startTime;
 extern spectraManager spectras;
+extern Config config;
 
 class ExG4PrimaryGeneratorAction01 : public G4VUserPrimaryGeneratorAction
 {

@@ -4,7 +4,10 @@
 CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
  ../include/ExG4ActionInitialization01.hh
  ../include/ExG4DetectorConstruction01.hh
+ ../include/ExG4DetectorSD.hh
  ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
+ ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/XrayFilt.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -91,6 +94,7 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4BoundingEnvelope.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4CSGSolid.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ClassificationOfNewTrack.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4CollectionNameVector.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Color.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Colour.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DAWNFILE.hh
@@ -117,6 +121,7 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4GRSVolume.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4GRSVolume.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4GeomSplitter.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4GeometryManager.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4GraphicsSystemList.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4HCofThisEvent.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4HepRep.hh
@@ -231,6 +236,7 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Scene.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SceneHandlerList.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SceneList.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SensitiveVolumeList.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SmartTrackStack.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SmartVoxelHeader.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SmartVoxelHeader.icc
@@ -238,6 +244,7 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SmartVoxelNode.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SmartVoxelProxy.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SmartVoxelProxy.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SmartVoxelStat.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StackManager.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StackedTrack.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Step.hh
@@ -309,8 +316,11 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VProcess.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VRML1File.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VRML2File.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VReadOutGeometry.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSDFilter.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSceneHandler.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSceneHandler.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSensitiveDetector.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSolid.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSolid.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VStateDependent.hh
@@ -369,41 +379,132 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
 CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o
  ../include/ExG4ActionInitialization01.hh
  ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
+ ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Point3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Transform3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Transform3D.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Vector3D.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Units/PhysicalConstants.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Utility/defs.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/AxisAngle.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/AxisAngle.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/LorentzVector.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/LorentzVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/Rotation.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/Rotation.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationInterfaces.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationX.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationX.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationY.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationY.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationZ.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationZ.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/ThreeVector.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AffineTransform.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AffineTransform.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Allocator.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AllocatorPool.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AutoLock.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DataVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DataVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DynamicParticle.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DynamicParticle.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ElectronOccupancy.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Element.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ElementTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ElementVector.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ExceptionSeverity.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Exp.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4GeomSplitter.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4IonisParamElm.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4IonisParamMat.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Isotope.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4IsotopeVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Log.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4LogicalVolume.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4LogicalVolume.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4LorentzVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Material.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertiesIndex.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertiesTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertiesTable.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertyVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationHistory.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationHistory.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationHistoryPool.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevel.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevel.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevelRep.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevelRep.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4OrderedTable.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PDefManager.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleGun.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleMomentum.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsModelCatalog.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVectorType.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PrimaryParticle.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PrimaryVertex.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ReferenceCountedHandle.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Region.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Region.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4RotationMatrix.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SIunits.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SandiaTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Step.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Step.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StepPoint.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StepPoint.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StepStatus.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SteppingControl.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4String.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4String.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Threading.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ThreeVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TouchableHandle.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TouchableHistory.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TouchableHistory.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Track.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Track.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TrackStatus.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TrackVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Transform3D.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Types.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPrimaryGenerator.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTouchable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTouchable.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserActionInitialization.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserTrackInformation.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ios.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/geomdefs.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/geomwdefs.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/globals.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/pwdefs.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/templates.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/tls.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/trkdefs.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/windefs.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  ../include/ExG4DetectorConstruction01.hh
  ../include/ExG4DetectorSD.hh
+ ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
+ ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -572,6 +673,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleChange.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleGun.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleMomentum.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleTable.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleTable.icc
@@ -666,6 +768,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VParticleChange.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPrimaryGenerator.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VProcess.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VReadOutGeometry.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSDFilter.hh
@@ -678,6 +781,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTrajectory.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserDetectorConstruction.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserEventInformation.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserTrackInformation.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VVolumeMaterialScanner.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VisAttributes.hh
@@ -705,6 +809,9 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/windefs.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
  ../include/ExG4DetectorSD.hh
+ ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
+ ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -774,12 +881,15 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PDefManager.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleGun.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleMomentum.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsModelCatalog.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVector.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVector.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVectorType.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PrimaryParticle.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PrimaryVertex.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ReferenceCountedHandle.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Region.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Region.icc
@@ -810,11 +920,13 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VHitsCollection.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPrimaryGenerator.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VReadOutGeometry.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSDFilter.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSensitiveDetector.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTouchable.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTouchable.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserTrackInformation.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ios.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/geomdefs.hh
@@ -827,6 +939,8 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/windefs.hh
 CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o
  ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
+ ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -1110,5 +1224,125 @@ CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/templates.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/tls.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/trajectoryControl.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/trkdefs.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/windefs.hh
+CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o
+ ../include/GetConfig.hh
+ /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/GetConfig.cpp
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Types.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/pwdefs.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/tls.hh
+CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o
+ ../include/spectraManager.hh
+ /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/spectraManager.cpp
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Point3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Transform3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Transform3D.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Vector3D.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Units/PhysicalConstants.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Units/SystemOfUnits.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Utility/defs.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/AxisAngle.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/AxisAngle.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/LorentzVector.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/LorentzVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/Rotation.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/Rotation.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationInterfaces.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationInterfaces.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationX.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationX.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationY.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationY.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationZ.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/RotationZ.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/ThreeVector.h
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Vector/ThreeVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AffineTransform.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AffineTransform.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Allocator.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AllocatorPool.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4AutoLock.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DataVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DataVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DynamicParticle.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4DynamicParticle.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ElectronOccupancy.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Element.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ElementTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ElementVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ExceptionSeverity.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Exp.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4GeomSplitter.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4IonisParamElm.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4IonisParamMat.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Isotope.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4IsotopeVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Log.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4LogicalVolume.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4LogicalVolume.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4LorentzVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Material.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertiesIndex.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertiesTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertiesTable.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialPropertyVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4MaterialTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationHistory.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationHistory.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationHistoryPool.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevel.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevel.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevelRep.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4NavigationLevelRep.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4OrderedTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PDefManager.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleMomentum.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsModelCatalog.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsOrderedFreeVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVector.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4PhysicsVectorType.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ReferenceCountedHandle.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Region.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Region.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4RotationMatrix.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SandiaTable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Step.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Step.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StepPoint.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StepPoint.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4StepStatus.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SteppingControl.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4String.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4String.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4SystemOfUnits.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Threading.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ThreeVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TouchableHandle.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TouchableHistory.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TouchableHistory.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Track.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Track.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TrackStatus.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4TrackVector.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Transform3D.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Types.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTouchable.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTouchable.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserTrackInformation.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ios.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/geomdefs.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/geomwdefs.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/globals.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/pwdefs.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/templates.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/tls.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/trkdefs.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/windefs.hh

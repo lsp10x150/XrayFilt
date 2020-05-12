@@ -17,12 +17,10 @@
 void counter() // Функция выводит в консоль сведения о количестве обработанных событий и времени работы программы
 {
     ++cntr;
-    if (cntr % 1000 == 0) std::cout << cntr << " particles processed. It is " << spectras.GetCntr() <<
-    " iteration. Processing time: " <<
-    std::time(NULL) - startTime << " seconds." << std::endl;
+    if (cntr % 1000 == 0) std::cout << std::setw(12) << cntr << " particles processed. It is "
+    << std::setw(2) << spectras.GetCntr() << " iteration. Processing time: " << std::setw(9) <<
+    std::time(0) - startTime << " seconds." << std::endl;
 }
-
-
 
 ExG4PrimaryGeneratorAction01::ExG4PrimaryGeneratorAction01()
 : G4VUserPrimaryGeneratorAction(),

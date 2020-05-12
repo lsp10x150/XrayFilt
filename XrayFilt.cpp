@@ -2,6 +2,7 @@
 #include <map>
 #include <ExG4PrimaryGeneratorAction01.hh>
 #include <ExG4DetectorSD.hh>
+#include <GetConfig.hh>
 #include "G4RunManager.hh"
 #include"QBBC.hh"
 #include "G4UImanager.hh"
@@ -13,58 +14,78 @@
 #include "G4GeometryManager.hh"
 #include "spectraManager.hh"
 #endif
-int cntr = 0;                   // Счетчик для откидывания в консоль информации о текущем количестве сгенерированных частиц
-int startTime = time(NULL); // Время запуска программы для откидывания в консоль информации о времени прошешем с момента запуска
-spectraManager spectras;
+int cntr = 0;
+int startTime = time(nullptr); // Время старта программы
+spectraManager spectras; // Объект менеджера спектров, в котором
+                         // хранятся исходный спектр и спектр текущей итерации
+Config config;           // Объект параметров хранит переменные, необходимые для запуска программы,
+                         // прочитанные из файла config.dat
 
 int main(int argc,char** argv)
 {
-G4double FILTER_WIDTH = 10; // Толщина фильтра в мм, далее передается в констуктор геометрии
-G4RunManager* runManager = new G4RunManager;
-//runManager->SetNumberOfThreads(G4Threading::G4GetNumberOfCores()); // Метод для указания количества рабочих потоков
-// пока предполагаю работу в однопоточном режиме
-G4VUserDetectorConstruction *geometry = new ExG4DetectorConstruction01(FILTER_WIDTH); // Передача толщины фильтра
-runManager->SetUserInitialization(geometry);
-// в конструктор геометрии, а конструктора геометрии в ранМенеджер
-runManager->SetUserInitialization(new QBBC); // В качестве списка физических взаимодействий выбран QBBC
-// Этот список рекомендуется в медицинских приложениях
-runManager->SetUserInitialization(new ExG4ActionInitialization01);
-runManager->Initialize();
-G4VisManager* visManager = new G4VisExecutive;
-visManager->Initialize();
-G4UImanager* UImanager = G4UImanager::GetUIpointer();
+    config.ShowParameters();
 
-/// Запуск визуализирущего макроса
+    const G4int n_particles = config.GetCertainParameter("N_PARTICLES");
+    G4double filter_width = config.GetCertainParameter("FILTER_WIDTH");
+    // Толщина фильтра в мм, далее передается в констуктор геометрии
+    const G4int n_iterations = config.GetCertainParameter("N_ITERATIONS") - 1;
+    const G4double step_reducing_filter_width =
+            config.GetCertainParameter("STEP_REDUCING_FILTER_WIDTH");
+
+/// Выделение памяти для ранМенеджера и запуск его конструктора
+    G4RunManager* runManager = new G4RunManager;
+/// Инициализация спсиска физических процессов и передача его в ранМенеджер
+    auto physList = new QBBC; // В качестве списка физических взаимодействий выбран QBBC
+    physList->SetVerboseLevel(0);// Этот список рекомендуется в медицинских приложениях
+    runManager->SetUserInitialization(physList);
+/// Инициализация геометрии см. ExG4DetectorConstruction01.cpp
+    G4VUserDetectorConstruction *geometry = new ExG4DetectorConstruction01(filter_width); // Передача толщины фильтра
+    runManager->SetUserInitialization(geometry);// в конструктор геометрии, а конструктора геометрии в ранМенеджер
+/// Инициализация пользовательских действий см. ExG4ActionInitialization01.cpp
+    runManager->SetUserInitialization(new ExG4ActionInitialization01);
+    runManager->Initialize();
+
+/// Запуск визуализирущего макроса (исключительно для демонстрационных целей)
+    if ( argc == 2 ) {
+        G4VisManager* visManager = new G4VisExecutive;
+        visManager->Initialize();
+        G4UImanager* UImanager = G4UImanager::GetUIpointer();
+        #ifdef G4UI_USE
+        G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+        G4String command = "/control/execute ";
+        G4String fileName = argv[1];
+        UImanager->ApplyCommand(command+fileName);
+        ui->SessionStart();
+        delete ui;
+        #endif
+    }
 /*
-if ( argc == 1 ) {
-#ifdef G4UI_USE
-G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-UImanager->ApplyCommand("/control/execute vis.mac");
-ui->SessionStart();
-delete ui;
-#endif
-}
- */
 /// Запуск макроса без визуализации
-//else {
-//G4String command = "/control/execute ";
-//G4String fileName = argv[1];
-//UImanager->ApplyCommand(command+fileName);
-//}
-runManager->BeamOn(3000000);
-spectras.PushGottenSpectraToFile();
-spectras.RenewGottenSpectra();
-for (int i = 9; i != 0; --i){
-    cntr = 0;
-    FILTER_WIDTH = i;
-    geometry = new ExG4DetectorConstruction01(FILTER_WIDTH); // Передача толщины фильтра
-    runManager->SetUserInitialization(geometry);
-    runManager->ReinitializeGeometry(true);
-    runManager->BeamOn(3000000);
-    spectras.PushGottenSpectraToFile();
-    spectras.RenewGottenSpectra();
-}
+    else {
+        G4String command = "/control/execute ";
+        G4String fileName = argv[1];
+        UImanager->ApplyCommand(command+fileName);
+    }
+*/
+/// В рабочем режиме исполняется цикл, если n_iterations != 0, иначе выполняется только один прогон симуляции
+    else {
+        runManager->BeamOn(n_particles);
+        spectras.PushGottenSpectraToFile();
+        spectras.RenewGottenSpectra();
 
+        if(n_iterations) {
+            for (int i = 0; i < n_iterations; ++i) {
+                cntr = 0;
+                filter_width -= step_reducing_filter_width;
+                geometry = new ExG4DetectorConstruction01(filter_width);
+                runManager->SetUserInitialization(geometry);
+                runManager->ReinitializeGeometry(true);
+                runManager->BeamOn(n_particles);
+                spectras.PushGottenSpectraToFile();
+                spectras.RenewGottenSpectra();
+            }
+        }
+    }
 delete runManager;
 return 0;
 }

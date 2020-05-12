@@ -17,7 +17,8 @@ public:
     void CollectSpectra(G4Step* step, G4TouchableHistory* history);
     void PushGottenSpectraToFile();
     void RenewGottenSpectra();
-    int GetCntr();
+    void ShowSpectra();
+    int GetCntr() const;
 };
 
 #endif //XRAYFILT_SPECTRAMANAGER_HH

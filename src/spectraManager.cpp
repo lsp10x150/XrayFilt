@@ -10,10 +10,12 @@
 
 /// Конструктор класса менеджера спектров, пока содержит только исходный спектр.
 spectraManager::spectraManager(){
-
-    cntr = 0;
+    gottenSpectra.reserve(200); //Резервируем в памяти 200 ячеек для хранения std::pair<G4double, G4double>
+    cntr = 1;
     for (int i = 0; i < 161; ++i){
-        gottenSpectra.push_back(std::make_pair(i,0));
+        gottenSpectra.emplace_back(i,0); // то же, что и push_back только более безопасный
+        // позволяет не указывать std::pair(i, 0), emplace_back сам понимает какого типа
+        // члены вектора - рассмотреть вопрос подробнее
     }
 
     std::fstream InitialSpectraFile("initialSpectra.dat"); // файл с исходным спектром
@@ -27,36 +29,36 @@ spectraManager::spectraManager(){
             InitialSpectraFile >> pair.second;
             InitialSpectraFile >> pair.first;
             tempSpectra.push_back(pair);
-            std::cout << pair.first << " " << pair.second << std::endl;
+            //std::cout << pair.first << " " << pair.second << std::endl;
         }
         InitialSpectraFile.close();
 
-        std::cout << "Initial spectra file has been read successfully!" << std::endl;
-
         /// Интегрирование спектра
         G4double buffer = 0;
-        for (auto it = tempSpectra.begin(); it != tempSpectra.end(); ++it){
-            it->first += buffer;
-            buffer = it->first;
+        for (auto & it : tempSpectra){
+            it.first += buffer;
+            buffer = it.first;
         }
 
         /// Нормирование спектра
-        for (auto it = tempSpectra.begin(); it != tempSpectra.end(); ++it){
-            it->first /= buffer; // Делим каждый элемент на buffer, в котором после предыдущего
+        for (auto & it : tempSpectra){
+            it.first /= buffer; // Делим каждый элемент на buffer, в котором после предыдущего
             // цикла хранится максимальное значение коллекции
         }
 
-        for (auto it = tempSpectra.begin(); it != tempSpectra.end(); ++it){
-            initialSpectra.insert(*it);
+        for (auto & it : tempSpectra){
+            initialSpectra.insert(it);
         }
 
-        std::cout << "Initial spectra holds: " << std::endl;
-        for (auto it = initialSpectra.begin(); it != initialSpectra.end(); ++it){
-            std::cout << it->first << " " << it->second;
-            std::cout << std::endl;
-        }
     }
     else std::cout << "Failed to open initial spectra file" << std::endl;
+}
+
+void spectraManager::ShowSpectra() {
+    std::cout << "Initial spectra holds: " << std::endl;
+    for (auto & it : initialSpectra){
+        std::cout << it.first << " " << it.second << std::endl;
+    }
 }
 
 std::map<G4double, G4double> spectraManager::getInitialSpectra(){ // Публичная функция доступа к исходному спектру
@@ -87,10 +89,10 @@ void spectraManager::PushGottenSpectraToFile() {
 
 void spectraManager::RenewGottenSpectra() {
     for (int i = 0; i < 161; ++i){
-        gottenSpectra.push_back(std::make_pair(i,0));
+        gottenSpectra.emplace_back(std::make_pair(i,0));
     }
 }
 
-int spectraManager::GetCntr() {
+int spectraManager::GetCntr() const {
     return cntr;
 }
