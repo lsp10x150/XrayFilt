@@ -379,6 +379,7 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o
 CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o
  ../include/ExG4ActionInitialization01.hh
  ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
  ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
@@ -501,6 +502,9 @@ CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  ../include/ExG4DetectorConstruction01.hh
  ../include/ExG4DetectorSD.hh
+ ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
+ ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -669,6 +673,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleChange.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleGun.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleMomentum.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleTable.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleTable.icc
@@ -763,6 +768,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VParticleChange.icc
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.icc
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPrimaryGenerator.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VProcess.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VReadOutGeometry.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSDFilter.hh
@@ -775,6 +781,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTrajectory.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserDetectorConstruction.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserEventInformation.hh
+ /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserTrackInformation.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VVolumeMaterialScanner.hh
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VisAttributes.hh
@@ -803,6 +810,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
  ../include/ExG4DetectorSD.hh
  ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
  ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
@@ -931,6 +939,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/windefs.hh
 CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o
  ../include/ExG4PrimaryGeneratorAction01.hh
+ ../include/GetConfig.hh
  ../include/spectraManager.hh
  /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp
  /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h

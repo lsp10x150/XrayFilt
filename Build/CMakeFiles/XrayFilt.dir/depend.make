@@ -378,6 +378,7 @@ CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o: /opt/applications/geant4/geant4.10.04.p0
 
 CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o: ../include/ExG4ActionInitialization01.hh
 CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o: ../include/ExG4PrimaryGeneratorAction01.hh
+CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o: ../include/GetConfig.hh
 CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o: ../include/spectraManager.hh
 CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o: ../src/ExG4ActionInitialization01.cpp
 CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
@@ -500,6 +501,9 @@ CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o: /opt/applications/
 
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: ../include/ExG4DetectorConstruction01.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: ../include/ExG4DetectorSD.hh
+CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: ../include/ExG4PrimaryGeneratorAction01.hh
+CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: ../include/GetConfig.hh
+CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: ../include/spectraManager.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: ../src/ExG4DetectorConstruction01.cpp
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/Normal3D.h
@@ -668,6 +672,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleChange.icc
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleDefinition.icc
+CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleGun.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleMomentum.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleTable.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4ParticleTable.icc
@@ -762,6 +767,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VParticleChange.icc
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPhysicalVolume.icc
+CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VPrimaryGenerator.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VProcess.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VReadOutGeometry.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VSDFilter.hh
@@ -774,6 +780,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VTrajectory.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserDetectorConstruction.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserEventInformation.hh
+CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserPrimaryGeneratorAction.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VUserTrackInformation.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VVolumeMaterialScanner.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4VisAttributes.hh
@@ -802,6 +809,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o: /opt/applications/
 
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: ../include/ExG4DetectorSD.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: ../include/ExG4PrimaryGeneratorAction01.hh
+CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: ../include/GetConfig.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: ../include/spectraManager.hh
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: ../src/ExG4DetectorSD.cpp
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
@@ -930,6 +938,7 @@ CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: /opt/applications/geant4/geant
 CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/windefs.hh
 
 CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: ../include/ExG4PrimaryGeneratorAction01.hh
+CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: ../include/GetConfig.hh
 CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: ../include/spectraManager.hh
 CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: ../src/ExG4PrimaryGeneratorAction01.cpp
 CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h
