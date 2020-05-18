@@ -1,5 +1,5 @@
 # Use this open statement to create an OpenGL view:
-/vis/open OGL 1200x900-0+0
+/vis/open OGL 600x600-0+0
 #
 # Use this open statement to create an OpenInventor view:
 #/vis/open OI
@@ -96,7 +96,7 @@
 # To get nice view
 # Make the "World" box invisible
 /vis/geometry/set/visibility World 0 true
-/vis/geometry/set/colour World 0 .1 0 1 .1
+/vis/geometry/set/colour World 0 0 0 1 .1
 # "Envelope" is transparent blue to represent air
 /vis/geometry/set/colour Detector 0 1 1 1 .5
 /vis/viewer/set/style surface

@@ -41,6 +41,8 @@ map
 -
 pwdefs.hh
 -
+G4String.hh
+-
 
 ../include/spectraManager.hh
 map
@@ -168,6 +170,8 @@ fstream
 iostream
 -
 iomanip
+-
+G4String.hh
 -
 
 /home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/spectraManager.cpp

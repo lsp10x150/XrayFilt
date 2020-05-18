@@ -47,16 +47,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="XrayFilt">
 				<Option output="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/XrayFilt" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug"/>
@@ -138,6 +128,16 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 XrayFilt/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>

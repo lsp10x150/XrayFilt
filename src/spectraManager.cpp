@@ -17,8 +17,11 @@ spectraManager::spectraManager(){
         // позволяет не указывать std::pair(i, 0), emplace_back сам понимает какого типа
         // члены вектора - рассмотреть вопрос подробнее
     }
+}
 
-    std::fstream InitialSpectraFile("initialSpectra.dat"); // файл с исходным спектром
+bool spectraManager::SetInitialSpectraFile(G4String path){
+
+    std::fstream InitialSpectraFile(path); // файл с исходным спектром
     if (InitialSpectraFile.good()) {
         std::cout << "Initial spectra file opened successfully!" << std::endl;
 
@@ -50,8 +53,14 @@ spectraManager::spectraManager(){
             initialSpectra.insert(it);
         }
 
+        return true;
     }
-    else std::cout << "Failed to open initial spectra file" << std::endl;
+    else {
+        std::cout << "Failed to open initial spectra file.\n"
+                     "Initializing monoenergetic beam of 50 keV" << std::endl;
+        initialSpectra.insert(std::make_pair(1, 50));
+        return false;
+    }
 }
 
 void spectraManager::ShowSpectra() {
@@ -76,8 +85,9 @@ void spectraManager::CollectSpectra(G4Step* step, G4TouchableHistory* history) {
 
 void spectraManager::PushGottenSpectraToFile() {
     std::string name = "./spectrums/spectrum";
-    std::string date = std::to_string(cntr)+".dat";
-    std::ofstream file(name+date);
+    std::string width = std::to_string(config.GetCertainParameter("FILTER_WIDTH") -
+                                               (cntr-1)*config.GetCertainParameter("STEP_REDUCING_FILTER_WIDTH")) + "Al.dat";
+    std::ofstream file(name+width);
     for(int i = 0; i<161; ++i)
     {
         file << std::setw(15) << gottenSpectra[i].first << " "

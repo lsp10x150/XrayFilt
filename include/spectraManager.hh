@@ -4,9 +4,11 @@
 #include<map>
 #include <G4TouchableHistory.hh>
 #include <G4Step.hh>
+#include "GetConfig.hh"
 
 #ifndef XRAYFILT_SPECTRAMANAGER_HH
 #define XRAYFILT_SPECTRAMANAGER_HH
+extern Config config;
 class spectraManager {
     std::map<G4double, G4double> initialSpectra;
     std::vector<std::pair<G4double, G4double>> gottenSpectra;
@@ -19,6 +21,7 @@ public:
     void RenewGottenSpectra();
     void ShowSpectra();
     int GetCntr() const;
+    bool SetInitialSpectraFile(G4String);
 };
 
 #endif //XRAYFILT_SPECTRAMANAGER_HH

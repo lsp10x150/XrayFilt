@@ -1228,10 +1228,13 @@ CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o: /opt/application
 
 CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o: ../include/GetConfig.hh
 CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o: ../src/GetConfig.cpp
+CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4String.hh
+CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4String.icc
 CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/G4Types.hh
 CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/pwdefs.hh
 CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/tls.hh
 
+CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o: ../include/GetConfig.hh
 CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o: ../include/spectraManager.hh
 CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o: ../src/spectraManager.cpp
 CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o: /opt/applications/geant4/geant4.10.04.p01-install/include/Geant4/CLHEP/Geometry/BasicVector3D.h

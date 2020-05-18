@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o"
   "CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o"
   "CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o"
-  "XrayFilt"
   "XrayFilt.pdb"
+  "XrayFilt"
 )
 
 # Per-language clean rules from dependency scanning.
