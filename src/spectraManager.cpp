@@ -8,6 +8,8 @@
 #include <pwdefs.hh>
 #include "spectraManager.hh"
 
+
+
 /// Конструктор класса менеджера спектров, пока содержит только исходный спектр.
 spectraManager::spectraManager(){
     gottenSpectra.reserve(200); //Резервируем в памяти 200 ячеек для хранения std::pair<G4double, G4double>
@@ -84,9 +86,13 @@ void spectraManager::CollectSpectra(G4Step* step, G4TouchableHistory* history) {
 }
 
 void spectraManager::PushGottenSpectraToFile() {
-    std::string name = "./spectrums/spectrum";
+    G4String name = "./spectrums/";
+    int time = std::time(nullptr);
+
+    name += config.GetMaterial();
+    name += "_";
     std::string width = std::to_string(config.GetCertainParameter("FILTER_WIDTH") -
-                                               (cntr-1)*config.GetCertainParameter("STEP_REDUCING_FILTER_WIDTH")) + "Al.dat";
+                                               (cntr-1)*config.GetCertainParameter("STEP_REDUCING_FILTER_WIDTH")) + "_mm.dat";
     std::ofstream file(name+width);
     for(int i = 0; i<161; ++i)
     {

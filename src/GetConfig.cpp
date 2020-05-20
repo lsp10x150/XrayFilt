@@ -33,6 +33,7 @@ void Config::SetConfigFile(G4String path){
         parameters.insert(std::make_pair("N_ITERATIONS", 1));
         parameters.insert(std::make_pair("STEP_REDUCING_FILTER_WIDTH", 0.5));
         parameters.insert(std::make_pair("INHERENT_FILTRATION", 1));
+        parameters.insert(std::make_pair("FILTER_MATERIAL", 0));
     }
 }
 
@@ -50,4 +51,24 @@ void Config::ShowParameters() {
 
 G4String Config::GetPathToInitialSpectra(){
     return pathToInitialSpectra;
+}
+
+G4String Config::GetMaterial() {
+    switch(int(this->GetCertainParameter("FILTER_MATERIAL"))){
+        case 0:
+            return "Al";
+            break;
+        case 1:
+            return "Cu";
+            break;
+        case 2:
+            return "Sn";
+            break;
+        case 3:
+            return "Zn";
+            break;
+        default:
+            return "Al";
+            break;
+    }
 }

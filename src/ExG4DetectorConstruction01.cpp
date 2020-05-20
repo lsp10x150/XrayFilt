@@ -29,7 +29,11 @@ G4VPhysicalVolume* ExG4DetectorConstruction01::Construct() {
     G4Material *vacuum = nist->FindOrBuildMaterial("G4_Galactic");
     //G4Material* W = nist->FindOrBuildMaterial("G4_W");
     G4Material *Al = nist->FindOrBuildMaterial("G4_Al");
+    G4Material *Cu = nist->FindOrBuildMaterial("G4_Cu");
+    G4Material *Sn = nist->FindOrBuildMaterial("G4_Sn");
+    G4Material *Zn = nist->FindOrBuildMaterial("G4_Zn");
     G4Material *Si = nist->FindOrBuildMaterial("G4_Si");
+
 
     /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo
     ///                        Мир
@@ -57,12 +61,12 @@ G4VPhysicalVolume* ExG4DetectorConstruction01::Construct() {
 
     if (config.GetCertainParameter("INHERENT_FILTRATION")){
         /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo
-        ///          Собственная фильтрация трубки - включается только при параметре INHERENT_FILTRATION != 0
+        ///          Собственная фильтрация трубки - включается только при параметре INHERENT_FILTRATION == 1
         /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo
         G4Box *inherentFiltSolid = new G4Box("inherentFilt", 3 * cm, 3 * cm, 1.25 * mm);
         // Согласно ISO 9236-1, собственная фильтрация кожуха рентгеновской трубки - 2,5 +- 0.2 мм Al
         G4LogicalVolume *inherentFiltLogic = new G4LogicalVolume(inherentFiltSolid, Al, "inherentFilt");
-        new G4PVPlacement(0, G4ThreeVector(0, 0, 1 * cm), inherentFiltLogic, "inherentFilt",
+        new G4PVPlacement(0, G4ThreeVector(0, 0, 4 * cm), inherentFiltLogic, "inherentFilt",
                           logicTube, false, 0, checkOverlaps);
     }
 
@@ -70,9 +74,37 @@ G4VPhysicalVolume* ExG4DetectorConstruction01::Construct() {
     ///                     Фильтр
     /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo
 
+    G4Material *filterMat = Al;
+    /// enum
+    /// Al - 0
+    /// Cu - 1
+    /// Sn - 2
+    /// Zn - 3
+
+    switch (int(config.GetCertainParameter("FILTER_MATERIAL")))
+    {
+        case 0:
+            filterMat = Al;
+            break;
+        case 1:
+            filterMat = Cu;
+            break;
+        case 2:
+            filterMat = Sn;
+            break;
+        case 3:
+            filterMat = Zn;
+            break;
+        default:
+            filterMat = Al;
+            break;
+    }
+    std::cout << "Filter Material is: ";
+    std::cout << *filterMat;
+
     G4Box* solidFilt = new G4Box("Filter", 5.*cm, 5.*cm, (FILTER_WIDTH/2)*mm);
-    G4LogicalVolume* logicFilt = new G4LogicalVolume(solidFilt, Al,"Filter");
-    new G4PVPlacement(0,G4ThreeVector(0,0,-43*cm), logicFilt,
+    G4LogicalVolume* logicFilt = new G4LogicalVolume(solidFilt, filterMat,"Filter");
+    new G4PVPlacement(0,G4ThreeVector(0,0,-40*cm), logicFilt,
                       "Filter", logicWorld, false, 0, checkOverlaps);
 
     /// oooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOoooOOOooo

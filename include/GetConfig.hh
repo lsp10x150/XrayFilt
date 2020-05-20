@@ -18,6 +18,7 @@ public:
     void ShowParameters();
     G4String GetPathToInitialSpectra();
     void SetConfigFile(G4String);
+    G4String GetMaterial();
     Config();
 };
 
