@@ -224,9 +224,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 Geant4_DIR:PATH=/opt/applications/geant4/geant4.10.04.p01-install/lib/Geant4-10.4.1
 
 //Path to a program.
-ProcessorCount_cmd_getconf:FILEPATH=/usr/bin/getconf
-
-//Path to a program.
 ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 
 //Path to a program.
@@ -240,12 +237,6 @@ XrayFilt_BINARY_DIR:STATIC=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-b
 
 //Value Computed by CMake
 XrayFilt_SOURCE_DIR:STATIC=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt
-
-//Value Computed by CMake
-example2_BINARY_DIR:STATIC=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug
-
-//Value Computed by CMake
-example2_SOURCE_DIR:STATIC=/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt
 
 
 ########################
@@ -403,8 +394,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: ProcessorCount_cmd_getconf
-ProcessorCount_cmd_getconf-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_nproc
 ProcessorCount_cmd_nproc-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl

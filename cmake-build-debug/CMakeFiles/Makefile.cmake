@@ -11,8 +11,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.5/CMakeSystem.cmake"
+  "../config.dat"
+  "../initialSpectra.dat"
   "../run1.mac"
-  "../vis.mac"
+  "../vis1.mac"
   "/opt/applications/geant4/geant4.10.04.p01-install/lib/Geant4-10.4.1/Geant4Config.cmake"
   "/opt/applications/geant4/geant4.10.04.p01-install/lib/Geant4-10.4.1/Geant4ConfigVersion.cmake"
   "/opt/applications/geant4/geant4.10.04.p01-install/lib/Geant4-10.4.1/Geant4LibraryDepends-debug.cmake"
@@ -52,7 +54,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "run1.mac"
-  "vis.mac"
+  "vis1.mac"
+  "config.dat"
+  "initialSpectra.dat"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

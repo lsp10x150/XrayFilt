@@ -216,10 +216,16 @@
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/config.dat">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/initialSpectra.dat">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/run1.mac">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/vis.mac">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/vis1.mac">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/../../../../../opt/applications/geant4/geant4.10.04.p01-install/lib/Geant4-10.4.1/Geant4Config.cmake">
