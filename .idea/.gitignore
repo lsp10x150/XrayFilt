@@ -1,2 +1,10 @@
 # Default ignored files
 /workspace.xml
+/Build
+/cmake-build-debug
+/someResults
+/'Spectrum Histories'
+/Specs.ods
+/.vscode
+/vis.mac
+
