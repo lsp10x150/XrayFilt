@@ -16,7 +16,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cpp)
 file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh)
 
-add_executable(XrayFilt XrayFilt.cpp ${sources} ${headers} src/spectraManager.cpp include/spectraManager.hh src/GetConfig.cpp include/GetConfig.hh)
+add_executable(XrayFilt XrayFilt.cpp ${sources} ${headers} src/SpectraManager.cpp include/SpectraManager.hh src/Config.cpp include/Config.hh)
 target_link_libraries(XrayFilt ${Geant4_LIBRARIES})
 
 set(EXAMPLE1_SCRIPTS

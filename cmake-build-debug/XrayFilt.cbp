@@ -47,6 +47,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="XrayFilt">
 				<Option output="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/XrayFilt" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug"/>
@@ -133,16 +143,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/cmake-build-debug"/>
 				<Option type="4"/>
@@ -177,40 +177,40 @@
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/XrayFilt.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/ExG4ActionInitialization01.hh">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/ActionInit.hh">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/ExG4DetectorConstruction01.hh">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/Config.hh">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/ExG4DetectorSD.hh">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/DetSD.hh">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/ExG4PrimaryGeneratorAction01.hh">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/DetectorConstr.hh">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/GetConfig.hh">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/PrimaryGenAction.hh">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/spectraManager.hh">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/include/SpectraManager.hh">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4ActionInitialization01.cpp">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ActionInit.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorConstruction01.cpp">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/Config.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4DetectorSD.cpp">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/DetSD.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/ExG4PrimaryGeneratorAction01.cpp">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/DetectorConstr.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/GetConfig.cpp">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/PrimaryGenAction.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
-		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/spectraManager.cpp">
+		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/src/SpectraManager.cpp">
 			<Option target="XrayFilt"/>
 		</Unit>
 		<Unit filename="/home/lsp10/workspace/G4WORK/GEANT4_Xray_Filt/CMakeLists.txt">

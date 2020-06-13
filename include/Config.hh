@@ -1,16 +1,9 @@
-//
-// Created by lsp10 on 09.05.2020.
-//
-
 #include <map>
 #include <pwdefs.hh>
 #include <G4String.hh>
-
 #ifndef XRAYFILT_GETCONFIG_HH
 #define XRAYFILT_GETCONFIG_HH
-
-
-class Config{
+class Config {
     std::map<std::string, const G4double> parameters;
     G4String pathToInitialSpectra;
 public:
@@ -19,8 +12,5 @@ public:
     G4String GetPathToInitialSpectra();
     void SetConfigFile(G4String);
     G4String GetMaterial();
-    Config();
-};
-
-
+    Config(); };
 #endif //XRAYFILT_GETCONFIG_HH

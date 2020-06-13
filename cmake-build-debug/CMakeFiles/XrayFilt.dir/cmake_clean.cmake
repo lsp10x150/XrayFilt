@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/XrayFilt.dir/XrayFilt.cpp.o"
-  "CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o"
-  "CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o"
-  "CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o"
-  "CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o"
-  "CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o"
-  "CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o"
-  "XrayFilt.pdb"
+  "CMakeFiles/XrayFilt.dir/src/ActionInit.cpp.o"
+  "CMakeFiles/XrayFilt.dir/src/Config.cpp.o"
+  "CMakeFiles/XrayFilt.dir/src/DetSD.cpp.o"
+  "CMakeFiles/XrayFilt.dir/src/DetectorConstr.cpp.o"
+  "CMakeFiles/XrayFilt.dir/src/PrimaryGenAction.cpp.o"
+  "CMakeFiles/XrayFilt.dir/src/SpectraManager.cpp.o"
   "XrayFilt"
+  "XrayFilt.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

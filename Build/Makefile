@@ -209,167 +209,167 @@ XrayFilt.cpp.s:
 	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/XrayFilt.cpp.s
 .PHONY : XrayFilt.cpp.s
 
-src/ExG4ActionInitialization01.o: src/ExG4ActionInitialization01.cpp.o
+src/ActionInit.o: src/ActionInit.cpp.o
 
-.PHONY : src/ExG4ActionInitialization01.o
-
-# target to build an object file
-src/ExG4ActionInitialization01.cpp.o:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.o
-.PHONY : src/ExG4ActionInitialization01.cpp.o
-
-src/ExG4ActionInitialization01.i: src/ExG4ActionInitialization01.cpp.i
-
-.PHONY : src/ExG4ActionInitialization01.i
-
-# target to preprocess a source file
-src/ExG4ActionInitialization01.cpp.i:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.i
-.PHONY : src/ExG4ActionInitialization01.cpp.i
-
-src/ExG4ActionInitialization01.s: src/ExG4ActionInitialization01.cpp.s
-
-.PHONY : src/ExG4ActionInitialization01.s
-
-# target to generate assembly for a file
-src/ExG4ActionInitialization01.cpp.s:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4ActionInitialization01.cpp.s
-.PHONY : src/ExG4ActionInitialization01.cpp.s
-
-src/ExG4DetectorConstruction01.o: src/ExG4DetectorConstruction01.cpp.o
-
-.PHONY : src/ExG4DetectorConstruction01.o
+.PHONY : src/ActionInit.o
 
 # target to build an object file
-src/ExG4DetectorConstruction01.cpp.o:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.o
-.PHONY : src/ExG4DetectorConstruction01.cpp.o
+src/ActionInit.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ActionInit.cpp.o
+.PHONY : src/ActionInit.cpp.o
 
-src/ExG4DetectorConstruction01.i: src/ExG4DetectorConstruction01.cpp.i
+src/ActionInit.i: src/ActionInit.cpp.i
 
-.PHONY : src/ExG4DetectorConstruction01.i
+.PHONY : src/ActionInit.i
 
 # target to preprocess a source file
-src/ExG4DetectorConstruction01.cpp.i:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.i
-.PHONY : src/ExG4DetectorConstruction01.cpp.i
+src/ActionInit.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ActionInit.cpp.i
+.PHONY : src/ActionInit.cpp.i
 
-src/ExG4DetectorConstruction01.s: src/ExG4DetectorConstruction01.cpp.s
+src/ActionInit.s: src/ActionInit.cpp.s
 
-.PHONY : src/ExG4DetectorConstruction01.s
+.PHONY : src/ActionInit.s
 
 # target to generate assembly for a file
-src/ExG4DetectorConstruction01.cpp.s:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorConstruction01.cpp.s
-.PHONY : src/ExG4DetectorConstruction01.cpp.s
+src/ActionInit.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ActionInit.cpp.s
+.PHONY : src/ActionInit.cpp.s
 
-src/ExG4DetectorSD.o: src/ExG4DetectorSD.cpp.o
+src/Config.o: src/Config.cpp.o
 
-.PHONY : src/ExG4DetectorSD.o
+.PHONY : src/Config.o
 
 # target to build an object file
-src/ExG4DetectorSD.cpp.o:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.o
-.PHONY : src/ExG4DetectorSD.cpp.o
+src/Config.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/Config.cpp.o
+.PHONY : src/Config.cpp.o
 
-src/ExG4DetectorSD.i: src/ExG4DetectorSD.cpp.i
+src/Config.i: src/Config.cpp.i
 
-.PHONY : src/ExG4DetectorSD.i
+.PHONY : src/Config.i
 
 # target to preprocess a source file
-src/ExG4DetectorSD.cpp.i:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.i
-.PHONY : src/ExG4DetectorSD.cpp.i
+src/Config.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/Config.cpp.i
+.PHONY : src/Config.cpp.i
 
-src/ExG4DetectorSD.s: src/ExG4DetectorSD.cpp.s
+src/Config.s: src/Config.cpp.s
 
-.PHONY : src/ExG4DetectorSD.s
+.PHONY : src/Config.s
 
 # target to generate assembly for a file
-src/ExG4DetectorSD.cpp.s:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4DetectorSD.cpp.s
-.PHONY : src/ExG4DetectorSD.cpp.s
+src/Config.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/Config.cpp.s
+.PHONY : src/Config.cpp.s
 
-src/ExG4PrimaryGeneratorAction01.o: src/ExG4PrimaryGeneratorAction01.cpp.o
+src/DetSD.o: src/DetSD.cpp.o
 
-.PHONY : src/ExG4PrimaryGeneratorAction01.o
+.PHONY : src/DetSD.o
 
 # target to build an object file
-src/ExG4PrimaryGeneratorAction01.cpp.o:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.o
-.PHONY : src/ExG4PrimaryGeneratorAction01.cpp.o
+src/DetSD.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/DetSD.cpp.o
+.PHONY : src/DetSD.cpp.o
 
-src/ExG4PrimaryGeneratorAction01.i: src/ExG4PrimaryGeneratorAction01.cpp.i
+src/DetSD.i: src/DetSD.cpp.i
 
-.PHONY : src/ExG4PrimaryGeneratorAction01.i
+.PHONY : src/DetSD.i
 
 # target to preprocess a source file
-src/ExG4PrimaryGeneratorAction01.cpp.i:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.i
-.PHONY : src/ExG4PrimaryGeneratorAction01.cpp.i
+src/DetSD.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/DetSD.cpp.i
+.PHONY : src/DetSD.cpp.i
 
-src/ExG4PrimaryGeneratorAction01.s: src/ExG4PrimaryGeneratorAction01.cpp.s
+src/DetSD.s: src/DetSD.cpp.s
 
-.PHONY : src/ExG4PrimaryGeneratorAction01.s
+.PHONY : src/DetSD.s
 
 # target to generate assembly for a file
-src/ExG4PrimaryGeneratorAction01.cpp.s:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/ExG4PrimaryGeneratorAction01.cpp.s
-.PHONY : src/ExG4PrimaryGeneratorAction01.cpp.s
+src/DetSD.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/DetSD.cpp.s
+.PHONY : src/DetSD.cpp.s
 
-src/GetConfig.o: src/GetConfig.cpp.o
+src/DetectorConstr.o: src/DetectorConstr.cpp.o
 
-.PHONY : src/GetConfig.o
+.PHONY : src/DetectorConstr.o
 
 # target to build an object file
-src/GetConfig.cpp.o:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.o
-.PHONY : src/GetConfig.cpp.o
+src/DetectorConstr.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/DetectorConstr.cpp.o
+.PHONY : src/DetectorConstr.cpp.o
 
-src/GetConfig.i: src/GetConfig.cpp.i
+src/DetectorConstr.i: src/DetectorConstr.cpp.i
 
-.PHONY : src/GetConfig.i
+.PHONY : src/DetectorConstr.i
 
 # target to preprocess a source file
-src/GetConfig.cpp.i:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.i
-.PHONY : src/GetConfig.cpp.i
+src/DetectorConstr.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/DetectorConstr.cpp.i
+.PHONY : src/DetectorConstr.cpp.i
 
-src/GetConfig.s: src/GetConfig.cpp.s
+src/DetectorConstr.s: src/DetectorConstr.cpp.s
 
-.PHONY : src/GetConfig.s
+.PHONY : src/DetectorConstr.s
 
 # target to generate assembly for a file
-src/GetConfig.cpp.s:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/GetConfig.cpp.s
-.PHONY : src/GetConfig.cpp.s
+src/DetectorConstr.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/DetectorConstr.cpp.s
+.PHONY : src/DetectorConstr.cpp.s
 
-src/spectraManager.o: src/spectraManager.cpp.o
+src/PrimaryGenAction.o: src/PrimaryGenAction.cpp.o
 
-.PHONY : src/spectraManager.o
+.PHONY : src/PrimaryGenAction.o
 
 # target to build an object file
-src/spectraManager.cpp.o:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.o
-.PHONY : src/spectraManager.cpp.o
+src/PrimaryGenAction.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/PrimaryGenAction.cpp.o
+.PHONY : src/PrimaryGenAction.cpp.o
 
-src/spectraManager.i: src/spectraManager.cpp.i
+src/PrimaryGenAction.i: src/PrimaryGenAction.cpp.i
 
-.PHONY : src/spectraManager.i
+.PHONY : src/PrimaryGenAction.i
 
 # target to preprocess a source file
-src/spectraManager.cpp.i:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.i
-.PHONY : src/spectraManager.cpp.i
+src/PrimaryGenAction.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/PrimaryGenAction.cpp.i
+.PHONY : src/PrimaryGenAction.cpp.i
 
-src/spectraManager.s: src/spectraManager.cpp.s
+src/PrimaryGenAction.s: src/PrimaryGenAction.cpp.s
 
-.PHONY : src/spectraManager.s
+.PHONY : src/PrimaryGenAction.s
 
 # target to generate assembly for a file
-src/spectraManager.cpp.s:
-	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/spectraManager.cpp.s
-.PHONY : src/spectraManager.cpp.s
+src/PrimaryGenAction.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/PrimaryGenAction.cpp.s
+.PHONY : src/PrimaryGenAction.cpp.s
+
+src/SpectraManager.o: src/SpectraManager.cpp.o
+
+.PHONY : src/SpectraManager.o
+
+# target to build an object file
+src/SpectraManager.cpp.o:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/SpectraManager.cpp.o
+.PHONY : src/SpectraManager.cpp.o
+
+src/SpectraManager.i: src/SpectraManager.cpp.i
+
+.PHONY : src/SpectraManager.i
+
+# target to preprocess a source file
+src/SpectraManager.cpp.i:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/SpectraManager.cpp.i
+.PHONY : src/SpectraManager.cpp.i
+
+src/SpectraManager.s: src/SpectraManager.cpp.s
+
+.PHONY : src/SpectraManager.s
+
+# target to generate assembly for a file
+src/SpectraManager.cpp.s:
+	$(MAKE) -f CMakeFiles/XrayFilt.dir/build.make CMakeFiles/XrayFilt.dir/src/SpectraManager.cpp.s
+.PHONY : src/SpectraManager.cpp.s
 
 # Help Target
 help:
@@ -388,24 +388,24 @@ help:
 	@echo "... XrayFilt.o"
 	@echo "... XrayFilt.i"
 	@echo "... XrayFilt.s"
-	@echo "... src/ExG4ActionInitialization01.o"
-	@echo "... src/ExG4ActionInitialization01.i"
-	@echo "... src/ExG4ActionInitialization01.s"
-	@echo "... src/ExG4DetectorConstruction01.o"
-	@echo "... src/ExG4DetectorConstruction01.i"
-	@echo "... src/ExG4DetectorConstruction01.s"
-	@echo "... src/ExG4DetectorSD.o"
-	@echo "... src/ExG4DetectorSD.i"
-	@echo "... src/ExG4DetectorSD.s"
-	@echo "... src/ExG4PrimaryGeneratorAction01.o"
-	@echo "... src/ExG4PrimaryGeneratorAction01.i"
-	@echo "... src/ExG4PrimaryGeneratorAction01.s"
-	@echo "... src/GetConfig.o"
-	@echo "... src/GetConfig.i"
-	@echo "... src/GetConfig.s"
-	@echo "... src/spectraManager.o"
-	@echo "... src/spectraManager.i"
-	@echo "... src/spectraManager.s"
+	@echo "... src/ActionInit.o"
+	@echo "... src/ActionInit.i"
+	@echo "... src/ActionInit.s"
+	@echo "... src/Config.o"
+	@echo "... src/Config.i"
+	@echo "... src/Config.s"
+	@echo "... src/DetSD.o"
+	@echo "... src/DetSD.i"
+	@echo "... src/DetSD.s"
+	@echo "... src/DetectorConstr.o"
+	@echo "... src/DetectorConstr.i"
+	@echo "... src/DetectorConstr.s"
+	@echo "... src/PrimaryGenAction.o"
+	@echo "... src/PrimaryGenAction.i"
+	@echo "... src/PrimaryGenAction.s"
+	@echo "... src/SpectraManager.o"
+	@echo "... src/SpectraManager.i"
+	@echo "... src/SpectraManager.s"
 .PHONY : help
 
 
